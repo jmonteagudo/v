@@ -15,8 +15,13 @@ public class PruebaSistema {
 		String clave = "Idioma", valor = "Español";
 		// Ejecución
 		miel.setConfiguracion(new ClaveParaLaConfiguracion(clave), valor);
+		miel.setConfiguracion(new ClaveParaLaConfiguracion("Background"), "Blanco");
+		miel.setConfiguracion(new ClaveParaLaConfiguracion("Fontcolor"), "Blanco");
+		miel.setConfiguracion(new ClaveParaLaConfiguracion("Font"), "Times New Roman");
 		// Verificacion
 		assertEquals(valor, miel.getConfiguracion(new ClaveParaLaConfiguracion(clave)));
+		assertEquals("Blanco", miel.getConfiguracion(new ClaveParaLaConfiguracion("Background")));
+		assertEquals("Times New Roman", miel.getConfiguracion(new ClaveParaLaConfiguracion("Font")));
 		
 	}
 

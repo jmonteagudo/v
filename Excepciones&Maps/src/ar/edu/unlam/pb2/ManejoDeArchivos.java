@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 
 public class ManejoDeArchivos {
 
-	public static void guardarObjeto(String path, Object actual) throws IOException {
+	public static void guardarObjeto(String path, Object actual) throws IOException  {
 		// TODO Auto-generated method stub
 		FileOutputStream archivo = new FileOutputStream(path);
 		ObjectOutputStream flujo = new ObjectOutputStream(archivo);
